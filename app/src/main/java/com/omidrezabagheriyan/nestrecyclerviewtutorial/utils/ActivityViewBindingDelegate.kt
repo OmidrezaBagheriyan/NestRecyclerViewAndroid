@@ -1,4 +1,4 @@
-package com.omidrezabagheriyan.nestrecyclerviewtutorial
+package com.omidrezabagheriyan.nestrecyclerviewtutorial.utils
 
 import android.os.Looper
 import android.view.LayoutInflater
