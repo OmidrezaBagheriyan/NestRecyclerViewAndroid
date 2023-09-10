@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
+    id("dagger.hilt.android.plugin")
     kotlin("kapt")
 }
 
@@ -46,6 +48,26 @@ dependencies {
     val navVersion = "2.7.2"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$navVersion")
+    implementation("androidx.navigation:navigation-runtime-ktx:$navVersion")
+
+    //Activity dependencies + Fragment dependencies
+    val activityVersion = "1.7.2"
+    implementation("androidx.activity:activity-ktx:$activityVersion")
+    val fragmentVersion = "1.6.1"
+    implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
+    val legacyVersion = "1.0.0"
+    implementation("androidx.legacy:legacy-support-v4:$legacyVersion")
+    val recyclerviewVersion = "1.3.1"
+    implementation("androidx.recyclerview:recyclerview:$recyclerviewVersion")
+
+    // Lifecycle dependencies
+    val lifecycleVersion = "2.6.2"
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
 
     // Networking dependencies
     val gsonVersion = "2.8.9"
@@ -65,6 +87,15 @@ dependencies {
     val glideVersion = "4.11.0"
     implementation("com.github.bumptech.glide:glide:$glideVersion")
     kapt("com.github.bumptech.glide:compiler:$glideVersion")
+
+    //Hilt components
+    val hiltVersion = "2.44"
+    implementation("com.google.dagger:hilt-android:$hiltVersion")
+    kapt("com.google.dagger:hilt-compiler:$hiltVersion")
+    val hiltNavigationVersion = "1.0.0"
+    implementation("androidx.hilt:hilt-navigation-fragment:$hiltNavigationVersion")
+    val hiltCompilerVersion = "1.0.0"
+    kapt("androidx.hilt:hilt-compiler:$hiltCompilerVersion")
 
     //Base dependencies
     val coreVersion = "1.12.0"
