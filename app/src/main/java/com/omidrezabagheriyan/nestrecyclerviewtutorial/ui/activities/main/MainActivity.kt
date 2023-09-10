@@ -1,17 +1,16 @@
-package com.omidrezabagheriyan.nestrecyclerviewtutorial.ui.main
+package com.omidrezabagheriyan.nestrecyclerviewtutorial.ui.activities.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.omidrezabagheriyan.nestrecyclerviewtutorial.databinding.ActivityMainBinding
+import com.omidrezabagheriyan.nestrecyclerviewtutorial.ui.utils.viewBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private val binding by viewBinding(ActivityMainBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
     }
