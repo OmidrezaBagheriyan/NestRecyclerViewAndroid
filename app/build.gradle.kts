@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
 }
 
 android {
@@ -41,6 +42,31 @@ android {
 
 dependencies {
 
+    // Navigation-component dependencies
+    val navVersion = "2.7.2"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+
+    // Networking dependencies
+    val gsonVersion = "2.8.9"
+    implementation("com.google.code.gson:gson:$gsonVersion")
+    val converterGsonVersion = "2.9.0"
+    implementation("com.squareup.retrofit2:converter-gson:$converterGsonVersion")
+    val retrofitVersion = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    val okHttpVersion = "4.7.2"
+    implementation("com.squareup.okhttp3:okhttp:$okHttpVersion")
+    implementation("com.squareup.okhttp3:logging-interceptor:$okHttpVersion")
+    val coroutinesVersion = "1.6.4"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+
+    //Glide dependencies
+    val glideVersion = "4.11.0"
+    implementation("com.github.bumptech.glide:glide:$glideVersion")
+    kapt("com.github.bumptech.glide:compiler:$glideVersion")
+
+    //Base dependencies
     val coreVersion = "1.12.0"
     implementation("androidx.core:core-ktx:$coreVersion")
     val appCompatVersion = "1.6.1"
