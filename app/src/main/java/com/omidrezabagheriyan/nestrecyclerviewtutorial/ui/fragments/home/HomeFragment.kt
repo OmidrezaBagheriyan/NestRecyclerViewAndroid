@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import com.omidrezabagheriyan.nestrecyclerviewtutorial.R
 import com.omidrezabagheriyan.nestrecyclerviewtutorial.databinding.FragmentHomeBinding
 import com.omidrezabagheriyan.nestrecyclerviewtutorial.ui.utils.viewBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private val binding by viewBinding<FragmentHomeBinding>()
