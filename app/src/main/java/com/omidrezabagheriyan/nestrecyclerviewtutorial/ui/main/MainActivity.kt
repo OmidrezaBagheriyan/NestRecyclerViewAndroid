@@ -1,4 +1,4 @@
-package com.omidrezabagheriyan.nestrecyclerviewtutorial.ui
+package com.omidrezabagheriyan.nestrecyclerviewtutorial.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

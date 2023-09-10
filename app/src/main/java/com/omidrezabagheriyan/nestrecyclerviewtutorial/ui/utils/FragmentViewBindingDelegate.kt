@@ -1,4 +1,4 @@
-package com.omidrezabagheriyan.nestrecyclerviewtutorial.utils
+package com.omidrezabagheriyan.nestrecyclerviewtutorial.ui.utils
 
 import android.view.View
 import androidx.fragment.app.Fragment
