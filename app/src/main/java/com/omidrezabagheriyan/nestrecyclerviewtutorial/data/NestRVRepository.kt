@@ -1,4 +1,6 @@
 package com.omidrezabagheriyan.nestrecyclerviewtutorial.data
 
-class NestRVRepository {
+import javax.inject.Inject
+
+class NestRVRepository @Inject constructor() {
 }
