@@ -1,3 +1,3 @@
 package com.omidrezabagheriyan.nestrecyclerviewtutorial.models
 
-class ProgrammingLanguages(id: Int, name: String, description: String)
+data class ProgrammingLanguages(val id: Int, val name: String, val description: String)
